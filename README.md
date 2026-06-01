@@ -3,7 +3,8 @@
 A fork of Ozmoo adding a SID music player.
 
 This is a very basic approach to allow SID music to be added to Z-code games. 
-Only one SID is permitted and it will play throughout the game. There is no feature to allow the game to select different songs.
+Only one SID is permitted and it will play throughout the game. There is no feature to allow the game to select different songs. The SID has been tested to use zeropage $88-$89 - this can be set in GoatTracker2. Other zeropage usage may lead to instability.
+The SID file needs to be located at $1000 and placed in the ASM folder. It should be named ozmoo.sid, or the name can be set on the last line of ozmoo.asm 
 
 # Ozmoo
 
