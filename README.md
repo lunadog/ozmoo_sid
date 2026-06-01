@@ -1,3 +1,10 @@
+# Ozmoo_SID
+
+A fork of Ozmoo adding a SID music player.
+
+This is a very basic approach to allow SID music to be added to Z-code games. 
+Only one SID is permitted and it will play throughout the game. There is no feature to allow the game to select different songs.
+
 # Ozmoo
 
 *Ozmoo (spell): survive unnatural death*
