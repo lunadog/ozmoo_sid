@@ -9,6 +9,8 @@
 ;Z7 = 1
 ;Z8 = 1
 
+jsr music
+
 ; Which machine to generate code for
 ; C64 is default target
 !ifndef VMEM {
@@ -2900,17 +2902,17 @@ m65_x16_load_dynmem_maybe_statmem
 !ifdef HAS_SID {
 init_sid
 	; Init sound
-	lda #0
-	ldx #$18
--	sta $d400,x
-	dex
-	bpl -
-	lda #$f
-	sta $d418
-	lda #$00
-	sta $d405
-	lda #$f2
-	sta $d406
+	;lda #0
+	;ldx #$18
+;-	;sta $d400,x
+	;dex
+	;bpl -
+	;lda #$f
+	;sta $d418
+	;lda #$00
+	;sta $d405
+	;lda #$f2
+	;sta $d406
 
 	; Init randomization
 	lda #$ff
@@ -2937,3 +2939,6 @@ story_start
 !ifndef config_load_address {
 	config_load_address = SCREEN_ADDRESS
 }
+
+*=$1000
+!binary "ozmoo.sid",,$007c+2
