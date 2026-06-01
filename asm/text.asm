@@ -1066,7 +1066,7 @@ update_read_text_timer
 getchar_and_maybe_toggle_darkmode
 	stx .getchar_save_x
 !ifdef SMOOTHSCROLL {
-	;jsr wait_smoothscroll
+	jsr wait_smoothscroll
 }
 	jsr kernal_getchar
 	cmp #0
