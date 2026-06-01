@@ -1066,7 +1066,7 @@ update_read_text_timer
 getchar_and_maybe_toggle_darkmode
 	stx .getchar_save_x
 !ifdef SMOOTHSCROLL {
-	jsr wait_smoothscroll
+	;jsr wait_smoothscroll
 }
 	jsr kernal_getchar
 	cmp #0
@@ -1155,7 +1155,7 @@ getchar_and_maybe_toggle_darkmode
 	
 .did_something
 	ldx #2
-	jsr play_beep
+	;jsr play_beep
 	lda #0
 .did_nothing
 	ldx .getchar_save_x

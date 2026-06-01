@@ -956,4 +956,24 @@ play_beep
 	}
 }
 
-
+music
+    lda #$0f
+	sta $dc0d	
+	sta $dd0d
+	lda #>irq
+	sta $0315
+	lda #<irq
+	sta $0314
+	lda #$f8
+	sta $d012
+	lda #$1b
+	sta $d011
+	lda #0
+	jsr $1000 ; tune init
+	lda #1
+	sta $d01a
+	rts
+irq
+	jsr $1003 ; tune play
+	inc $d019
+	jmp $ea31
